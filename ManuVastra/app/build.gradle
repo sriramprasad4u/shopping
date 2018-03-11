@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+check.dependsOn 'assembleDebugAndroidTest'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.2'
+    flavorDimensions "minSdkVersion"
+
+    defaultConfig {
+        applicationId "com.manuvastra"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+configurations.all {
+    resolutionStrategy.force 'com.android.support:support-annotations:27.1.0'
+}
+
+dependencies {
+    compile 'com.android.support:multidex:1.0.3'
+    compile 'com.android.support:appcompat-v7:27.1.0'
+    compile 'com.android.support:animated-vector-drawable:27.1.0'
+    compile 'com.android.support:cardview-v7:27.1.0'
+    compile 'com.android.support:design:27.1.0'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.3'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.3'
+    // Firebase Authentication
+    compile 'com.google.firebase:firebase-auth:11.8.0'
+
+    // Google Sign In SDK (only required for Google Sign In)
+    compile 'com.google.android.gms:play-services-auth:11.8.0'
+
+    // Firebase UI
+    // Used in FirebaseUIActivity.
+    compile 'com.firebaseui:firebase-ui-auth:3.2.2'
+
+    compile'com.android.support:customtabs:27.1.0'
+
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+}
+
+apply plugin: 'com.google.gms.google-services'

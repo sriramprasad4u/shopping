@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="true"
+    >
+    <LinearLayout
+
+        android:orientation="vertical"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:scrollbars="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.manuvastra.easyshopping.demoapp.com.manuvastra.demoapp.BrowseActivity">
+    <!--tools:showIn="@layout/app_bar_main"-->
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"
+        android:nestedScrollingEnabled="true"
+        />
+
+    <ListView
+        android:layout_below="@id/type"
+        android:id="@+id/item_list"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="30dp"
+        ></ListView>
+
+    <LinearLayout
+        android:id="@+id/price_list"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_below="@id/item_list">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Total ($): "
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical|center"
+            android:gravity="center_vertical|center"
+            android:layout_weight="1"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/total_price"
+            android:textSize="20dp"
+            android:text="0"
+            android:layout_gravity="right"
+            android:gravity="center_vertical|center"
+            android:layout_weight="2"
+            />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/checkout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/address1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Address"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/price_list"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="123 Main Street \n Columbia, SC 23654"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address1"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/payment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Information"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_below="@+id/address"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:editable="false"
+                android:focusable="false"
+                android:text="Visa: ****-****-****-1234"
+                android:focusableInTouchMode="false"
+                android:layout_below="@+id/payment1"
+                />
+        </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place Order"
+        android:id="@+id/checkout_button"
+        android:layout_gravity="end"
+        android:onClick="checkoutButtonClick" />
+</LinearLayout>
+    </ScrollView>

@@ -1,0 +1,101 @@
+[
+  {
+    "featured": true,
+    "depId": "1",
+    "review": "This is an excellent 20 mega pixel camera, with a very good 28x Zoom, and really very little color distortion around the edges.",
+    "title": "Camera 20.2",
+    "id": "1",
+    "image": "camera",
+    "rating": 4,
+    "price": 542,
+    "description": "20.2MP Digital Camera with 28x Optical Zoom."
+  },
+  {
+    "featured": false,
+    "depId": "1",
+    "review": "Very nice display. Strong CPU and plenty of RAM.",
+    "title": "Laptop 13.3",
+    "id": "2",
+    "image": "laptop",
+    "rating": 3,
+    "price": 495,
+    "description": "Power and performance in a small package. A sharp 13.3 inch screen, 8 GB RAM and weighs less than 3 lbs."
+  },
+  {
+    "featured": false,
+    "depId": "1",
+    "review": "Futuristic design will turn heads.",
+    "title": "Tablet 9.7 Wifi",
+    "id": "3",
+    "image": "tablet",
+    "rating": 5,
+    "price": 395,
+    "description": "Better than ever, the Tablet 9.7 is the most versatile tablet we've ever built and includes wifi."
+  },
+  {
+    "featured": false,
+    "depId": "2",
+    "review": "This is my second pair and I recommend them to all my running friends.",
+    "title": "Women's Runner 2.0",
+    "id": "4",
+    "image": "womens_runner",
+    "rating": 3.5,
+    "price": 69,
+    "description": "Light weight, but durable. The Runner 2.0 uses dual-density foam for comfort and support."
+  },
+  {
+    "featured": false,
+    "depId": "2",
+    "review": "Great shoe. I wore out 3 pairs years ago and can't wait to get them again.",
+    "title": "Men's Runner 1.0",
+    "id": "5",
+    "image": "mens_runner",
+    "rating": 4.5,
+    "price": 94,
+    "description": "Our original runner is available again in new colors. Same great performance as the original."
+  },
+  {
+    "featured": true,
+    "depId": "2",
+    "review": "I worried about ordering hoes on line, but these fit just as expected.",
+    "title": "Men's Cross Trainer 3.0",
+    "id": "6",
+    "image": "mens_cross_trainer",
+    "rating": 5,
+    "price": 74,
+    "description": "Our most popular cross trainer. Can handle anything you throw at it. Light weight and great looks."
+  },
+  {
+    "featured": false,
+    "depId": "3",
+    "review": "I absolutely love this espresso machine!!! It is very easy to use.",
+    "title": "Espresso XL",
+    "id": "7",
+    "image": "espresso_xl",
+    "rating": 4.5,
+    "price": 232,
+    "description": "Making great espresso has never been this easy! Looks great on your counter too."
+  },
+  {
+    "featured": true,
+    "depId": "3",
+    "review": "Works perfectly - just like new. ",
+    "title": "Espresso XL Carafe",
+    "id": "8",
+    "image": "espresso_xl_carafe",
+    "rating": 5,
+    "price": 25,
+    "description": "Replacement carafe for Espresso XL."
+  },
+  {
+    "featured": false,
+    "depId": "3",
+    "review": "I LOVE my new Espresso ASAP. It gets right to it, producing it's first cup right away.",
+    "title": "Espresso ASAP",
+    "id": "9",
+    "image": "espresso_asap",
+    "rating": 4.5,
+    "price": 154,
+    "description": "Fastest espresso maker on the market! Easy to use controls let you control the brew."
+  }
+]
