@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -65,6 +66,8 @@ public class BrowseActivity extends AppCompatActivity
         for (String key : departments.keySet()){
             topChannelMenu.add(departments.get(key));
         }
+
+        topChannelMenu = m.addSubMenu("Log out");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -137,6 +140,7 @@ public class BrowseActivity extends AppCompatActivity
         if (id == R.id.cart) {
 
             Intent intent = new Intent(getApplicationContext(), DisplayCart.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             getApplicationContext().startActivity(intent);
         }
 
@@ -152,6 +156,11 @@ public class BrowseActivity extends AppCompatActivity
         if(item.getTitle().equals("Featured")){
             featured = true;
             depName = "";
+        }
+        else if(item.getTitle().equals("Log out")) {
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(this, GoogleSignInActivity.class);
+            startActivity(intent);
         }
         else{
             featured = false;

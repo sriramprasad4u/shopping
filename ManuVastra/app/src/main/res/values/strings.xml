@@ -116,5 +116,6 @@
     <string name="emailpassword_title_text">Email and Password</string>
 
     <string name="phone_title_text">Phone Number</string>
+    <string name="title_activity_logout_activity">logout_activity</string>
 
 </resources>
